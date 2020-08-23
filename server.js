@@ -23,6 +23,8 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
+app.use(express.static('dist'))
+
 const specsRouter = require("./server/routes/spec.routes");
 app.use("/api/specs", specsRouter);
 
