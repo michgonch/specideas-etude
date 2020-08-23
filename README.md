@@ -1,2 +1,2 @@
 # specideas-etude
-Etude app with Vue, Express and MongoDB
+Etude app with Vue, Express and Mongoose
