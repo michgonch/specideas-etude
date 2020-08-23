@@ -23,9 +23,8 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.get("/", (req, res) => {
-  res.json({ message: "hi from nodejs" });
-});
+const specsRouter = require("./server/routes/spec.routes");
+app.use("/api/specs", specsRouter);
 
 const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {
