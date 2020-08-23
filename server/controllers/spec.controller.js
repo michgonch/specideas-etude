@@ -107,6 +107,12 @@ const specActions = {
   },
 
   deleteAll(req, res) {
+    const sudo = req.body.sudo;
+    if (!sudo) {
+      res.send("You shall not pass!");
+      return;
+    }
+
     Spec.deleteMany({})
       .then(data => {
         res.send({

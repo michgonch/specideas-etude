@@ -10,7 +10,7 @@ router.post("/", specs.create);
 
 router.put("/:id", specs.update);
 
+router.delete("/", specs.deleteAll);
 router.delete("/:id", specs.delete);
-router.delete("/delall", specs.deleteAll);
 
 module.exports = router;
