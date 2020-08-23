@@ -19,7 +19,7 @@ const router = new Router({
     },
     {
       path: "/add",
-      name: "add",
+      name: "add-spec",
       component: () => import("./components/AddSpec")
     }
   ]
